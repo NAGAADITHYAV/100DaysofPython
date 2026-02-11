@@ -1,13 +1,3 @@
-# print(type(123))
-# print(type(123.45))
-# print(type("Hello"))
-# print(type(True))
-
-# #BMI claculator
-# weight = float(input("Enter your weight in kg: "))
-# height = float(input("Enter your height in m: "))
-# bmi = weight / (height * height)
-# print("Your BMI is: ", bmi)
 
 print("Welcome to the Tip Calculator.")
 total_bill = float(input("What was the total bill? "))
