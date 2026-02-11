@@ -12,3 +12,6 @@ Day 3:
 Day 4:
  - Randomization and Python Lists
 
+Day 5:
+ - Python Loops
+
