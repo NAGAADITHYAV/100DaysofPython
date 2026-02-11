@@ -1,5 +1,13 @@
 import random
-from RPS_ASCII_ART import HAND
+import sys
+import os
+
+# Add parent directory to path so we can import constants
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
+from constants.RPS_ASCII_ART import HAND
 
 # hand  = ['rock', 'paper', 'scissors']
 
