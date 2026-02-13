@@ -15,3 +15,15 @@ Day 4:
 Day 5:
  - Python Loops
 
+Day 6:
+ - Python Function basics and work is for course resources website provided
+
+Day 7:
+ - Hangman(loops, control flow)
+
+Day 8:
+ - CaeserCipher(code functions)
+
+Day 9:
+ - Dictionaries(Hash)
+
