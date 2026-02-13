@@ -4,13 +4,14 @@ class CaeserCipher:
         print('Default Encoder Key is', DEFAULT_ENCODER, 'To change it pass it with methods, Dont forget the key')
 
     def encode(self, message, encoder = DEFAULT_ENCODER):
-        encrypted_message = []
-        for x in message:
-            encrypted_message.append(CHARSET[(CHARSET.index(x)+encoder)%51])
-        return ''.join(encrypted_message)
+        return self._change(message, encoder, 1)
 
     def decode(self, encrypted_message, encoder = DEFAULT_ENCODER):
-        message = []
-        for x in encrypted_message:
-            message.append(CHARSET[(CHARSET.index(x)-encoder)%51])
-        return ''.join(message)
+        return self._change(encrypted_message, encoder, -1)
+    
+    def _change(self, message, encoder, encode_or_decode):
+        encoder *= encode_or_decode
+        changed_message = []
+        for x in message:
+            changed_message.append(CHARSET[(CHARSET.index(x)+encoder)%CHARSET_LEN])
+        return ''.join(changed_message)
