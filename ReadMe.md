@@ -27,3 +27,5 @@ Day 8:
 Day 9:
  - Dictionaries(Hash)
 
+Day 10:
+ - Functions
