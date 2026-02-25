@@ -29,3 +29,6 @@ Day 9:
 
 Day 10:
  - Functions
+
+Day 11:
+ - Implemted a blackjack game with card art, split, hit and start and cash out chips.
