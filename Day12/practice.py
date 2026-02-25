@@ -1,0 +1,1 @@
+# we cant modify golbal varibales locally (eg inside a method)
