@@ -2,12 +2,9 @@ import random
 from art import LOGO
 from data import DATA
 
-def get_random_movie(exclude_set):
+def get_random_movie():
     """Returns a movie index not present in the exclude_set."""
-    while True:
-        index = random.randint(0, len(DATA) - 1)
-        if index not in exclude_set:
-            return index
+    return random.choice(DATA)
 
 def format_movie_data(movie):
     """Returns a readable string for the movie display."""
@@ -26,13 +23,13 @@ def play_game():
     game_should_continue = True
     
     # Initial setup
-    idx_a = get_random_movie(set())
-    idx_b = get_random_movie({idx_a})
-    used_indices = {idx_a, idx_b}
+    movie_b = get_random_movie()
 
     while game_should_continue:
-        movie_a = DATA[idx_a]
-        movie_b = DATA[idx_b]
+        movie_a = movie_b
+        movie_b = get_random_movie()
+        while movie_a == movie_b:
+          movie_b = get_random_movie()
 
         print(f"Compare A: {format_movie_data(movie_a)}")
         print("vs")
@@ -48,16 +45,6 @@ def play_game():
         if is_correct:
             score += 1
             print(f"You're right! Current score: {score}.\n")
-            
-            # Move B to A and get a new B
-            idx_a = idx_b
-            idx_b = get_random_movie(used_indices)
-            used_indices.add(idx_b)
-            
-            # Optional: Reset used_indices if you run out of movies
-            #here we are also not re using shows already used
-            if len(used_indices) == len(DATA):
-                used_indices = {idx_a, idx_b}
         else:
             game_should_continue = False
             print(f"Sorry, that's wrong. Final score: {score}")
