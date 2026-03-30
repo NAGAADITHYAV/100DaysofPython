@@ -32,3 +32,9 @@ Day 10:
 
 Day 11:
  - Implemted a blackjack game with card art, split, hit and start and cash out chips.
+
+Day 12:
+ - Study about scope / namespace
+
+Day 13:
+ - Debugging and Understanding logic
