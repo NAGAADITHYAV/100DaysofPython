@@ -41,3 +41,6 @@ Day 13:
 
 Day14:
  - Higher or lower Game.
+
+Day15:
+ - Digital Cofee Machine with storage on disk using SQLite(sqlite3)
